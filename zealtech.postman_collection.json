@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "461e9e85-52d6-462d-a019-fa1ee15cdae2",
+		"name": "zealtech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18498447"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://zealtech.test/api/login",
+					"protocol": "http",
+					"host": [
+						"zealtech",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vemVhbHRlY2gudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE2NjYxMDUyODksImV4cCI6MTY2NjEwODg4OSwibmJmIjoxNjY2MTA1Mjg5LCJqdGkiOiJEZzl1NmVFa0hOa2phY3FoIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jT_4rN5yoNVSisLl_lG79-I5mJ8UqFAKlf-QKZ9a1Co",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://zealtech.test/api/list",
+					"protocol": "http",
+					"host": [
+						"zealtech",
+						"test"
+					],
+					"path": [
+						"api",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vemVhbHRlY2gudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE2NjYxMDUyODksImV4cCI6MTY2NjEwODg4OSwibmJmIjoxNjY2MTA1Mjg5LCJqdGkiOiJEZzl1NmVFa0hOa2phY3FoIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jT_4rN5yoNVSisLl_lG79-I5mJ8UqFAKlf-QKZ9a1Co",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "brand_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "vat",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "00",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/AvindraBhattacharyya/Downloads/0 3jjjW9R9iWNU0j9T.jpg"
+						},
+						{
+							"key": "description",
+							"value": "jkwfalfadfasdjfjyyyy",
+							"type": "text"
+						},
+						{
+							"key": "images[]",
+							"type": "file",
+							"src": "/C:/Users/AvindraBhattacharyya/Downloads/0 3jjjW9R9iWNU0j9T.jpg"
+						},
+						{
+							"key": "images[]",
+							"type": "file",
+							"src": "/C:/Users/AvindraBhattacharyya/Desktop/mypic.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://zealtech.test/api/create",
+					"protocol": "http",
+					"host": [
+						"zealtech",
+						"test"
+					],
+					"path": [
+						"api",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vemVhbHRlY2gudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE2NjYxMDUyODksImV4cCI6MTY2NjEwODg4OSwibmJmIjoxNjY2MTA1Mjg5LCJqdGkiOiJEZzl1NmVFa0hOa2phY3FoIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jT_4rN5yoNVSisLl_lG79-I5mJ8UqFAKlf-QKZ9a1Co",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "brand_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "testing",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "vat",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "00",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/AvindraBhattacharyya/Downloads/0 3jjjW9R9iWNU0j9T.jpg"
+						},
+						{
+							"key": "description",
+							"value": "jkwfalfadfasdjfjyyyy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://zealtech.test/api/update/1",
+					"protocol": "http",
+					"host": [
+						"zealtech",
+						"test"
+					],
+					"path": [
+						"api",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vemVhbHRlY2gudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE2NjYxMDUyODksImV4cCI6MTY2NjEwODg4OSwibmJmIjoxNjY2MTA1Mjg5LCJqdGkiOiJEZzl1NmVFa0hOa2phY3FoIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jT_4rN5yoNVSisLl_lG79-I5mJ8UqFAKlf-QKZ9a1Co",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://zealtech.test/api/delete/1",
+					"protocol": "http",
+					"host": [
+						"zealtech",
+						"test"
+					],
+					"path": [
+						"api",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
