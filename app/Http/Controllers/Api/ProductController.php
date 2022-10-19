@@ -11,12 +11,22 @@ class ProductController extends Controller
 {
     public function list()
     {
-        $products = Product::orderBy('id','desc')->get();
+        $products = Product::with(['brand','category','productImage'])->orderBy('id','desc')->get();
+        // $products = Product::all();
         return response()->json(['products' => $products]);
     }
 
     public function create(Request $request)
     {
+        $request->validate([
+            'category_id' => 'required',
+            'brand_id' => 'required',
+            'name' => 'required',
+            'price' => 'required',
+            'vat' => 'required',
+            'discount' => 'required',
+            'image' => 'image',
+        ]);
         try {
             $filename ='';
             if ($request->has('image')) {
